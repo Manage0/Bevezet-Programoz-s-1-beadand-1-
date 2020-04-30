@@ -7,6 +7,7 @@ public class Main {
         buyingThreeForADollar(5);
         buyingOnePointNinetyNineDollarPerPound(false, 4);
         buyingBuyTwoGetOneFree(3);
+        answeringQuestions();
     }
 
     private static void buyingThreeForADollar(int amount){
@@ -27,10 +28,21 @@ public class Main {
         }
     }
 
-    private static void buyingBuyTwoGetOneFree(double amount){
-        double price = Math.round(amount/2)*BuyTwoGetOneFree.getPrice();
-        System.out.println("You've bought "+(int)amount+" of something, and every second one is free so the " +
-                "final price is "+(int)price +"$.");
+    private static void buyingBuyTwoGetOneFree(int amount){
+        double price = amount *BuyTwoGetOneFree.getPrice();
+        int additionalProduct= (int)(amount/2);
+        System.out.println("You've bought "+(int) (double) 3 +" of something, but it has the offer, buy two, get one free, so the " +
+                "final price is "+(int)price +"$ and you get additional "+additionalProduct+" of the product.");
     }
 
+    private static void answeringQuestions(){
+        System.out.println("Fractional money exists, because people can pay with cents.");
+        System.out.println("Rounding takes place when the result has more zeros in 0.00 form.");
+        System.out.println("With debugging I can keep trail of pricing decisions in the program and I need to do it to have" +
+                " the right solution.");
+        System.out.println("Costs and prices aren't the same class of things, because costs are the prices multiplied" +
+                " by the amount.");
+        System.out.println("If you buy 100 cans of something that has the offer of buy two get one free, you will have to pay " +
+                "for 67 product and you will get 33 of them free.");
+    }
 }
